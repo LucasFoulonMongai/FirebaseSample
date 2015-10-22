@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
     private FirebaseConnector firebaseConnector;
     private FirebaseConnector.OnConnectionStateListener connectionStateListener = new FirebaseConnector.OnConnectionStateListener() {
         @Override
