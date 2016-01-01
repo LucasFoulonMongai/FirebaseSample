@@ -1,11 +1,11 @@
-package com.lfm.firesample.managers;
+package com.lfm.firesample.manager;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.LocalBroadcastManager;
 
 import com.lfm.firesample.firebase.FirebaseManager;
-import com.lfm.firesample.models.Message;
+import com.lfm.firesample.model.Message;
 
 /**
  * Created by Lucas FOULON-MONGAÏ, github.com/LucasFoulonMongai  on 21/10/15.

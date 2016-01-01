@@ -1,4 +1,4 @@
-package com.lfm.firesample.presenters;
+package com.lfm.firesample.itempresenter;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.lfm.firesample.R;
-import com.lfm.firesample.models.Message;
+import com.lfm.firesample.model.Message;
 import com.lfm.rvgenadapter.ItemPresenter;
 
 import java.text.SimpleDateFormat;
@@ -18,7 +18,7 @@ import java.util.Locale;
 /**
  * Created by Lucas FOULON-MONGAÏ, github.com/LucasFoulonMongai  on 21/10/15.
  */
-public class MessagePresenter extends ItemPresenter<Message> {
+public class ItemMessagePresenter extends ItemPresenter<Message> {
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm - dd/MM", Locale.getDefault());
     private TextView messageHoraire;
     private TextView messageUser;

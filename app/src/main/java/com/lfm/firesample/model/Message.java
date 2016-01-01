@@ -1,4 +1,4 @@
-package com.lfm.firesample.models;
+package com.lfm.firesample.model;
 
 /**
  * Created by Lucas FOULON-MONGAÏ, github.com/LucasFoulonMongai  on 21/10/15.

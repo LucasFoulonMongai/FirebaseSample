@@ -1,4 +1,4 @@
-package com.lfm.firesample.activities;
+package com.lfm.firesample.activity;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -18,9 +18,9 @@ import android.widget.Toast;
 import com.firebase.client.FirebaseError;
 import com.lfm.firesample.R;
 import com.lfm.firesample.firebase.FirebaseConnector;
-import com.lfm.firesample.managers.MessageManager;
-import com.lfm.firesample.models.Message;
-import com.lfm.firesample.presenters.MessagePresenter;
+import com.lfm.firesample.itempresenter.ItemMessagePresenter;
+import com.lfm.firesample.manager.MessageManager;
+import com.lfm.firesample.model.Message;
 import com.lfm.rvgenadapter.GenericRecyclerAdapter;
 
 import java.util.List;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 if (messageAdapter == null) {
                     Bundle params = new Bundle();
                     params.putString("user", Build.DEVICE);
-                    messageAdapter = new GenericRecyclerAdapter<>(context, messageList, MessagePresenter.class, null, params);
+                    messageAdapter = new GenericRecyclerAdapter<>(context, messageList, ItemMessagePresenter.class, null, params);
                     messageListview.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
                     messageListview.setAdapter(messageAdapter);
                 } else {
