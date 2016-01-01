@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.lfm.firesample.R;
 import com.lfm.firesample.models.Message;
-import com.lfm.rvgenadapter.ViewPresenter;
+import com.lfm.rvgenadapter.ItemPresenter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,7 +18,7 @@ import java.util.Locale;
 /**
  * Created by Lucas FOULON-MONGAÏ, github.com/LucasFoulonMongai  on 21/10/15.
  */
-public class MessagePresenter extends ViewPresenter<Message> {
+public class MessagePresenter extends ItemPresenter<Message> {
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm - dd/MM", Locale.getDefault());
     private TextView messageHoraire;
     private TextView messageUser;
@@ -26,7 +26,7 @@ public class MessagePresenter extends ViewPresenter<Message> {
     private View view;
 
     @Override
-    public void initViewPresenter(Context context, ViewGroup parent, Bundle params) {
+    public void initViewPresenter(Context context, ViewGroup parent, Bundle params, View.OnClickListener onClickListener) {
         android.view.LayoutInflater inflater = LayoutInflater.from(context);
         view = inflater.inflate(R.layout.item_message, parent, false);
         messageHoraire = (TextView) view.findViewById(R.id.messageHoraire);
@@ -41,6 +41,7 @@ public class MessagePresenter extends ViewPresenter<Message> {
             view.setVisibility(View.VISIBLE);
         } else {
             view.setVisibility(View.GONE);
+            return;
         }
 
         messageHoraire.setText(dateFormat.format(new Date(data.getTime())));

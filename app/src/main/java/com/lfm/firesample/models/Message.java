@@ -8,7 +8,6 @@ public class Message {
     private String userId;
     private long time;
 
-
     // Required default constructor for Firebase object mapping
     @SuppressWarnings("unused")
     private Message() {

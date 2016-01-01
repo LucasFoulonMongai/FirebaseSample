@@ -26,7 +26,7 @@ import com.lfm.rvgenadapter.GenericRecyclerAdapter;
 import java.util.List;
 
 /**
- * Created by Lucas FOULON-MONGAÏ, github.com/LucasFoulonMongai  on 21/10/15.
+ * Created by Lucas FOULON-MONGAÏ, github.com/LucasFoulonMongai on 21/10/15.
  */
 public class MainActivity extends AppCompatActivity {
 

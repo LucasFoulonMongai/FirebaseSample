@@ -13,16 +13,9 @@ public class FirebaseConnector implements ValueEventListener {
     private Firebase mFirebaseRef;
     private OnConnectionStateListener onConnectionStateListener;
 
-    private FirebaseConnector() {
-    }
-
     private FirebaseConnector(String firebaseUrl) {
         this.mFirebaseRef = new Firebase(firebaseUrl);
         this.mFirebaseRef.getRoot().child(".info/connected").addValueEventListener(this);
-    }
-
-    public Firebase getFirebase() {
-        return mFirebaseRef;
     }
 
     public static FirebaseConnector initInstance(String firebaseUrl) {
@@ -36,6 +29,9 @@ public class FirebaseConnector implements ValueEventListener {
         return instance;
     }
 
+    public Firebase getFirebase() {
+        return mFirebaseRef;
+    }
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
